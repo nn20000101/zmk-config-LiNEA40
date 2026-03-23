@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,
+            //スクロール方向を逆転,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -109,6 +109,26 @@
         Esc {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
+        };
+
+        Tab {
+            bindings = <&kp TAB>;
+            key-positions = <10 11>;
+        };
+
+        Capslock {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <21 20>;
+        };
+
+        Backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
+        };
+
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <18 19>;
         };
     };
 
