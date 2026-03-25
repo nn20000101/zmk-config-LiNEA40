@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,
+            //スクロール方向を逆転,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -65,21 +65,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-
-        ZenkakuHankaku {
-            bindings = <&kp GRAVE>;
-            key-positions = <11 12>;
-        };
-
-        DeleteKey {
-            bindings = <&kp DEL>;
-            key-positions = <7 8>;
-        };
-
-        InsertKey {
-            bindings = <&kp INS>;
-            key-positions = <6 7>;
-        };
 
         CenterClick {
             bindings = <&mkp MB3>;
@@ -177,10 +162,10 @@
 
         MARK {
             bindings = <
-&kp EXCLAMATION  &kp AT  &kp HASH      &kp DOLLAR    &kp PERCENT                    &kp CARET  &kp AMPERSAND         &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp GRAVE        &trans  &kp SEMI      &kp APOS      &trans                         &trans     &kp LBKT              &kp RIGHT_BRACKET      &kp BACKSLASH         &kp EQUAL
-&kp LS(GRAVE)    &trans  &kp LS(SEMI)  &kp LS(APOS)  &trans                         &trans     &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LS(BACKSLASH)     &kp LS(EQUAL)
-&trans           &trans  &trans        &trans        &trans       &trans    &trans  &trans                           &trans                 &trans                &trans
+&kp EXCLAMATION  &kp AT         &kp HASH      &kp DOLLAR    &kp PERCENT                    &kp CARET  &kp AMPERSAND         &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp GRAVE        &kp EQUAL      &kp SEMI      &kp APOS      &trans                         &trans     &kp LBKT              &kp RIGHT_BRACKET      &kp BACKSLASH         &trans
+&kp LS(GRAVE)    &kp LS(EQUAL)  &kp LS(SEMI)  &kp LS(APOS)  &trans                         &trans     &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LS(BACKSLASH)     &trans
+&trans           &trans         &trans        &trans        &trans       &trans    &trans  &trans                           &trans                 &trans                &trans
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
