@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -119,6 +119,26 @@
         Layer6 {
             bindings = <&lt 6 RCTRL>;
             key-positions = <16 17 18 19>;
+        };
+
+        RightWin {
+            bindings = <&kp RIGHT_WIN>;
+            key-positions = <37 36>;
+        };
+
+        LeftAlt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <35 34>;
+        };
+
+        Menu {
+            bindings = <&mt RIGHT_ALT K_APP>;
+            key-positions = <27 28 26>;
+        };
+
+        Pscrn {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <6 7 8>;
         };
     };
 
