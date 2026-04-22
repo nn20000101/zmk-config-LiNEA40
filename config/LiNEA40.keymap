@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -133,7 +133,7 @@
 
         Menu {
             bindings = <&mt RCTRL K_APP>;
-            key-positions = <28 26 27>;
+            key-positions = <27 26>;
         };
 
         Pscrn {
