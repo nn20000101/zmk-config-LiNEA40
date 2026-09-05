@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -78,12 +78,12 @@
 
         PrevClick {
             bindings = <&mkp MB4>;
-            key-positions = <8 7>;
+            key-positions = <9 8>;
         };
 
         ClickNext {
             bindings = <&mkp MB5>;
-            key-positions = <7 6>;
+            key-positions = <6 5>;
         };
 
         Click {
@@ -93,7 +93,7 @@
 
         Esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <1 2>;
+            key-positions = <1 0>;
         };
 
         CapsLock {
@@ -139,6 +139,11 @@
         Pscrn {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <6 7 8>;
+        };
+
+        Layer6_2 {
+            bindings = <&lt 6 RCTRL>;
+            key-positions = <11 13>;
         };
     };
 
@@ -215,17 +220,17 @@
 &trans  &trans   &trans   &trans   &trans  &trans    &trans  &trans              &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOL_UP>;
+            sensor-bindings = <&re_kp PAGE_DOWN PAGE_UP>;
         };
 
         //5
 
         CURSOR {
             bindings = <
-&kp ESCAPE      &kp UP_ARROW    &trans           &trans      &trans                    &trans  &trans          &kp UP_ARROW  &trans     &trans
-&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp DELETE  &trans                    &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans
-&kp HOME        &kp PAGE_UP     &kp PAGE_DOWN    &kp END     &trans                    &trans  &trans          &trans        &trans     &trans
-&trans          &trans          &trans           &trans      &trans  &trans    &trans  &trans                  &trans        &trans     &trans
+&kp ESCAPE      &kp UP_ARROW    &trans           &trans      &trans                    &trans  &kp BACKSPACE   &kp UP_ARROW  &kp DELETE  &kp ESCAPE
+&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp DELETE  &trans                    &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT   &kp ENTER
+&kp HOME        &kp PAGE_UP     &kp PAGE_DOWN    &kp END     &trans                    &trans  &kp HOME        &kp PG_UP     &kp PG_DN   &kp END
+&trans          &trans          &trans           &trans      &trans  &trans    &trans  &trans                  &trans        &trans      &trans
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_RIGHT SCRL_LEFT>;
@@ -241,7 +246,7 @@
 &trans        &trans        &trans        &trans        &trans        &bootloader    &bootloader  &studio_unlock                &trans        &trans        &bt BT_CLR_ALL
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
     };
 };
